@@ -3,6 +3,7 @@
 @media only screen and (max-width: 600px) {
     #handle {
         font-size: 7vw;
+        padding: 3vw;
     }
 
     #bannerName {
@@ -71,6 +72,8 @@
     #untar #textStuff .item2,
     #untar #textStuff .item3 {
         font-size: 5.5vw;
+        width: 72vw;
+        text-align: center;
     }
 
     #sanmar #bg {
@@ -239,8 +242,114 @@
 
 }
 
-/*This should be uncommon in 2025. Hopefully they can just enable desktop site*/
-@media only screen and (max-width: 399px) {
+/*Ugh I actually have to write this*/
+@media only screen and (max-width: 400px) {
+    #educationAndAchievements {
+        transform: translateX(-2%);
+    }
+
+    #untar {
+        transform: translateY(40vw);
+    }
+
+    #content {
+        height: 500vw;
+    }
+
+    #skills {
+        margin-top: 220vw;
+    }
+
+    #skills .lists .item1 {
+        top: -20vw;
+    }
+
+    #skills .lists .item2 {
+        top: 115vw;
+    }
+
+    #skills .lists .item3 {
+        top: 245vw;
+    }
+
+    #skills .lists li img {
+        transform: translateX(-65%);
+    }
+
+    #skills .lists li div {
+        transform: translate(-65%, 64vw);
+    }
+
+    .listSubtitle ul {
+        line-height: 6vw;
+    }
+
+    .listSubtitle .wrapped {
+        list-style-type: disc;
+        transform: translate(40vw, -24vw);
+    }
+
+    #experience {
+        top: 430vw;
+        height: 315vw;
+    }
+
+    #experience .lists .item1 {
+        transform: translate(-65%, -20vw);
+    }
+
+    #experience .lists .item2 {
+        transform: translate(-65%, 110vw);
+    }
+
+    #experience .lists li iframe,
+    #experience .lists li img {
+        width: 75vw;
+        height: 60vw;
+        top: 3vw;
+        left: 2.5vw;
+    }
+
+    #experience .lists .item1 a,
+    #experience .lists .item2 h1,
+    #experience .lists .item1 span,
+    #experience .lists .item2 span {
+        font-size: 7vw;
+    }
+
+
+    #contacts {
+        top: 690vw;
+    }
+}
+
+/*Height fixes. I shouldve used normal divs instead of playing absolute position*/
+@media only screen and (max-width: 350px) {
+    #experience {
+        top: 410vw;
+    }
+
+    #contacts {
+        top: 670vw;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #handle {
+        padding: 4vw;
+    }
+
+    #experience {
+        top: 380vw;
+    }
+
+    #contacts {
+        top: 630vw;
+    }
+}
+
+/*I looked it up, this time 280px is definitely uncommon in 2025*/
+@media only screen and (max-width: 280px) {
 
     body div,
     body ul {
@@ -248,7 +357,6 @@
     }
 
     body h3 {
-        color: #000000;
         opacity: 100%;
         z-index: 1000;
     }
