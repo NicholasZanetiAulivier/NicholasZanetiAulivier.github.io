@@ -210,9 +210,6 @@
 
     #experience {
         transform: translateY(850px);
-    }
-
-    #experience {
         height: 1440px
     }
 
@@ -332,16 +329,4 @@
     #skills .partTitle {
         top: 30px;
     }
-}
-
-/*Look man, by this point you can just scroll the screen*/
-/*how thin is your phone :'(  */
-/*Just enable Desktop Site*/
-/*It'll be boring af if everything is arranged vertically*/
-/*let my face be there*/
-@media only screen and (max-width: 630px) {
-    body {
-        overflow-x: scroll;
-    }
-
 }
