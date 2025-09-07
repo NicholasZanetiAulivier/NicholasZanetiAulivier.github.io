@@ -11,6 +11,10 @@ body {
     overflow-y: unset;
 }
 
+body h3 {
+    opacity: 0;
+    position: fixed;
+}
 
 .topnavbar {
     background-color: #f2f1e9;
@@ -116,7 +120,7 @@ body {
     padding-bottom: 5px;
     top: 30px;
     width: 350px;
-    left: 50vw;
+    left: 50%;
     transform: translateX(-50%);
     text-align: center;
     font-weight: bold;
@@ -220,6 +224,24 @@ body {
     transition-timing-function: ease-out;
 }
 
+#sanmar #textStuff .item1 {
+    font-size: 30px;
+    font-weight: bold;
+    transform: translateY(-50%);
+}
+
+#sanmar #textStuff .item2 {
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateY(50%);
+}
+
+#sanmar #textStuff .item3 {
+    font-size: 30px;
+    font-weight: 900;
+    bottom: 20px;
+}
+
 .transparent {
     opacity: 0;
 }
@@ -301,6 +323,25 @@ body {
     border-right: solid white 1px;
 }
 
+#untar #textStuff .item1 {
+    font-size: 30px;
+    font-weight: bold;
+    transform: translateY(-50%)
+}
+
+#untar #textStuff .item2 {
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateY(50%);
+}
+
+#untar #textStuff .item3 {
+    font-size: 25px;
+    font-weight: 900;
+    bottom: 20px;
+    text-align: center;
+}
+
 #untar #textStuff .captioner {
     margin-top: 125px;
     transition: 0.5s;
@@ -345,7 +386,7 @@ body {
 #skills .lists {
     position: flex;
     list-style-type: none;
-    left: 50vw;
+    left: 50%;
     right: 0;
     justify-content: center;
     margin-top: 170px;
