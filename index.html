@@ -42,7 +42,7 @@
             <form action="_" id="inputForm">
                 <div class="w">
                     <label for="weight" style="font-weight: bold;">Weight:</label>
-                    <input type="number" id="weight" name="weight"></input>
+                    <input type="number" lang="en" min="0" step="0.001" id="weight" name="weight"></input>
                     <select id="weightU" name="weightU">
                         <option value="kg" selected>kg</option>
                         <option value="g">g</option>
@@ -50,10 +50,10 @@
                         <option value="lb">lb</option>
                     </select>
                 </div>
-                <input type="range" min="0" max="200" id="weightS" name="weightS">
+                <input type="range" step="0.001" min="0" max="200" id="weightS" name="weightS">
                 <div>
                     <label for="height" style="font-weight: bold;">Height:</label>
-                    <input type="number" id="height" name="height"></input>
+                    <input type="number" lang="en" min="0" step="0.001" id="height" name="height"></input>
                     <select id="heightU" name="heightU">
                         <option value="cm" selected>cm</option>
                         <option value="m">m</option>
@@ -61,7 +61,7 @@
                         <option value="ft">ft</option>
                     </select>
                 </div>
-                <input type="range" min="0" max="250" id="heightS" name="heightS">
+                <input type="range" step="0.001" min="0" max="250" id="heightS" name="heightS">
             </form>
 
             <div id="resultContainer">

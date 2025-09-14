@@ -28,11 +28,11 @@ let heights = {
 
 form.addEventListener('submit', calculate);
 weight.oninput = (e) => {
-    weightRange.value = e.target.value > weightRange.max ? e.target.value : weightRange.max;
+    weightRange.value = e.target.value < weightRange.max ? e.target.value : weightRange.max;
     calculate();
 };
 height.oninput = (e) => {
-    heightRange.value = e.target.value > heightRange.max ? e.target.value : heightRange.max;
+    heightRange.value = e.target.value < heightRange.max ? e.target.value : heightRange.max;
     calculate();
 };
 weightRange.oninput = (e) => {
