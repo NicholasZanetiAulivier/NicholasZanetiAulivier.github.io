@@ -1,149 +1,29 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nicholas Z.A. Landing Page</title>
-    <link rel="stylesheet" type="text/css" href="indexStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Energy Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles/topnavbar.css">
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
 
-    <!--Medium screen fix for screens where the content elements are too wide-->
-    <link rel="stylesheet" type="text/css" href="css-fix/indexStyle-medium-screen.css">
-
-    <!--Small screen fix for phones cuz phones are frustrating-->
-    <link rel="stylesheet" type="text/css" href="css-fix/indexStyle-small-screen.css">
+    <link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
 </head>
 
 <body>
-    <h3>Please enable desktop site. Your screen resolution is not supported</h3>
-    <!--Should be reasonable-->
-
-    <ul class=" topnavbar">
-        <span id="handle">Nicholas Zaneti Aulivier</span>
-        <li><a href="#">Home</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
+    <ul id="topnavbar">
+        <li><a href="index.html">Zendergy</a></li>
     </ul>
-
-    <div id="banner">
-        <span style="text-align: center;">
-            <a href="CV(en) 16-7-25.pdf" download><span id="bannerName">Nicholas Zaneti Aulivier</span><br>
-                <span id="bannerWelcome">Welcome To My CV (click to download)</span></a>
-        </span>
-    </div>
-
-    <div id="content">
-        <div id="profile" class="container">
-            <span class="partTitle">Profile</span>
-            <img src="img/DSC_6607_.JPG">
-            <span id="profileText">Computer Science student with an interest in, graphics programming and video
-                game development. Capable of handling tasks in an effective and timely manner. Always seeking
-                opportunities to hone, improve and innovate creative solutions.</span>
-        </div>
-        <div id="educationAndAchievements" class="container">
-            <div id="sanmar">
-                <img src="img/sanmar.jpg">
-                <div id="bg"></div>
-                <div id="textStuff">
-                    <span class="captioner">ALUMNI OF</span>
-                    <span class="transparent item1">San Marino HighSchool</span>
-                    <span class="transparent item2">2021-2024</span>
-                    <span class="transparent item3">Rank 1 Student
-                        Overall</span>
-                </div>
-            </div>
-            <div id="untar">
-                <img src="img/untar.jpg">
-                <div id="bg"></div>
-                <div id="textStuff">
-                    <span class="captioner">STUDENT OF</span>
-                    <span class="transparent item1">Tarumanagara University</span>
-                    <span class="transparent item2">2024-Ongoing</span>
-                    <span class="transparent item3">2nd
-                        Place in
-                        Competitive
-                        Programming</span>
-                </div>
-            </div>
-        </div>
-        <div id="skills" class="container">
-            <span class="partTitle">Skills</span>
-            <ul class="lists">
-                <li class="item1">
-                    <img src="img/googleMS.png">
-                    <div>
-                        <span class="listTitle">MS Office Mastery</span>
-                        <div class="listSubtitle">Experienced in using Microsoft Office applications with a
-                            preference in using Google's web based alternatives for group projects.
-                            <ul>
-                                <li>MS Word</li>
-                                <li>MS Powerpoint</li>
-                                <li>MS Excel</li>
-                                <li style="list-style-type: none;">&nbsp;</li> <!--It's easier this way-->
-                                <li class="wrapped">Google Docs</li>
-                                <li class="wrapped">Google Slides</li>
-                                <li class="wrapped">Google Sheets</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="item2">
-                    <img src="img/Programming.png">
-                    <div>
-                        <span class="listTitle">Programming</span>
-                        <div class="listSubtitle">
-                            Understands a variety of programming languages.
-                            <ul>
-                                <li>Java</li>
-                                <li>C++</li>
-                                <li>C</li>
-                                <li>Python</li>
-                                <li class="wrapped">Javascript</li>
-                                <li class="wrapped">Lua</li>
-                                <li class="wrapped">SQL</li>
-                                <li class="wrapped">Matlab</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="item3">
-                    <img src="img/Godot.png">
-                    <div>
-                        <span class="listTitle">Game Dev Knowledge</span>
-                        <span class="listSubtitle">Capable of using Godot to build a game from the ground up. Has an
-                            understanding on game logic and is interested in game optimization.<br><br>Understands how
-                            to use Love2D, Phaser, and Raylib. Has experience in making a game using pure Java
-                            code</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div id="experience" class="container">
-            <span class="partTitle">Experience</span>
-            <ul class="lists">
-                <li class="item1">
-                    <iframe src="https://www.youtube.com/embed/Q-OAEWkmPjU"> </iframe>
-                    <a href="https://www.youtube.com/channel/UC04pmh45Yh2-W2qxBcdg2nQ" target="_blank">Content
-                        Creator</a>
-                    <span>2024 - Present</span>
-                </li>
-                <li class="item2">
-                    <img src="img/teach.png">
-                    <h1>Teaching Assistant</h1>
-                    <span>July 2025 - Present</span>
-                </li>
-            </ul>
+    <div class="results">
+        <div id="bigContainer">
+            <a href="KPEnergy.html" id="one">
+                <span>Kinetic</span><span>Potential</span>
+            </a>
+            <a href="ElectricEnergy.html" id="two">
+                <span>Electric</span><span>Charge</span>
+            </a>
         </div>
     </div>
-
-    <div id="contacts">
-        <h1>Contacts</h1>
-        <a href="tel:+6285697660048" target="_blank">+62 85697660048</a><br>
-        <a href="mailto:nicholas.535240054@stu.untar.ac.id" target="_blank">nicholas.535240054@stu.untar.ac.id</a><br>
-        <a href="mailto:auliviernicholaszaneti23@gmail.com" target="_blank">auliviernicholaszaneti23@gmail.com</a><br>
-    </div>
-
 </body>
 
 </html>

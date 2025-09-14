@@ -1,0 +1,13 @@
+body {
+    background-color: #00A8E8;
+}
+
+.results {
+    position: relative;
+    margin-top: 170px;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
