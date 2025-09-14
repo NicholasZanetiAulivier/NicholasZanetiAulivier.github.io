@@ -1,0 +1,243 @@
+body {
+    background-color: #e7fafa;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    width: fit-content;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#topnavbar {
+    background-color: #2EC4B6;
+    position: fixed;
+    height: fit-content;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2vw;
+}
+
+#topnavbar h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1vw;
+    text-align: justify;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: 6vw;
+}
+
+#facts {
+    padding: 1vw;
+}
+
+.bigContainer {
+    display: flex;
+    flex-direction: column;
+    width: 28vw;
+    height: fit-content;
+    background-color: white;
+    border-radius: 2vw;
+    border-color: #2EC4B6;
+    border-style: solid;
+    padding: 1vw;
+    padding-bottom: 2vw;
+    align-items: center;
+    justify-content: center;
+    margin: 4vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+#inputForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7vw;
+    font-family: monospace;
+}
+
+#inputForm div,
+input[type="range"] {
+    align-self: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+input {
+    font-size: 1vw;
+    height: fit-content;
+}
+
+select {
+    font-size: 1vw;
+}
+
+input[type="number"],
+select {
+    border-radius: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-top: 0.5vw;
+    padding-left: 0.5vw;
+    border-width: 1px;
+    margin-right: 0.5vw;
+}
+
+input[type="number"] {
+    width: 5vw;
+}
+
+#resultContainer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#resultContainer h1 {
+    font-size: 3vw;
+}
+
+img {
+    width: 24vw;
+}
+
+#formula {
+    width: 15vw;
+}
+
+tr,
+th,
+table {
+    font-size: 1vw;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 1vw;
+}
+
+#firstRow {
+    background-color: #d6d9ff;
+}
+
+#charts {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #topnavbar h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 2.7vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        margin: auto;
+        margin-top: 6vw;
+    }
+
+    #facts {
+        order: 2;
+    }
+
+    .bigContainer {
+        width: 60vw;
+        padding: 1vw;
+        padding-bottom: 5vw;
+        margin: 1vw;
+    }
+
+    #inputForm {
+        font-size: 4vw;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    input {
+        font-size: 4vw;
+        height: fit-content;
+    }
+
+    select {
+        font-size: 4vw;
+    }
+
+    input[type="number"] {
+        width: 15vw;
+        border-radius: 1vw;
+    }
+
+    #resultContainer {
+        font-size: 5vw;
+    }
+
+    #resultContainer h1 {
+        font-size: 6vw;
+    }
+
+    img {
+        width: 50vw;
+    }
+
+    #formula {
+        width: 35vw;
+    }
+
+    tr,
+    th,
+    table {
+        font-size: 3vw;
+    }
+}

@@ -2,28 +2,122 @@
 <html>
 
 <head>
+    <title>BMI Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Energy Calculator</title>
-    <link rel="stylesheet" type="text/css" href="styles/topnavbar.css">
-    <link rel="stylesheet" type="text/css" href="styles/global.css">
-
-    <link rel="stylesheet" type="text/css" href="styles/indexStyle.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
     <ul id="topnavbar">
-        <li><a href="index.html">Zendergy</a></li>
+        <li>
+            <h1>BMI Calculator</h1>
+        </li>
     </ul>
-    <div class="results">
-        <div id="bigContainer">
-            <a href="KPEnergy.html" id="one">
-                <span>Kinetic</span><span>Potential</span>
-            </a>
-            <a href="ElectricEnergy.html" id="two">
-                <span>Electric</span><span>Charge</span>
-            </a>
+    <div id="content">
+        <div class="bigContainer" id="facts">
+            <h1>What is BMI?</h1>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;Body mass index (BMI) is an estimate of body fat based on height and weight that
+                usually applies to
+                adult
+                men and
+                women. It is measured in units of kg/m&#178; from the weight divided by the square of the height</p>
+            <img src="bmi.svg" id="formula" alt="BMI Equation Formula">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The value obtained from the calculation of BMI is used to categorize whether a
+                person is underweight,
+                normal weight, overweight, or obese depending on what range the value falls between. These ranges of BMI
+                vary based on factors such as region and age, and are sometimes further divided into subcategories such
+                as severely underweight or very severely obese. </p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;Although, BMI does not take into account whether a
+                person's weight is muscle or fat., nor does it take into account a person's environment or ethnnicity.
+                <b>This is why it is innacurate</b> for Muscle builders, Long-distance athletes, Pregnant individuals,
+                Elderly
+                populations, Young children, People with a physical disability,
+                and People of certain ethnicities
+            </p>
+        </div>
+
+        <div class="bigContainer" id="calculator">
+            <h1>BMI Calculator</h1>
+            <form action="_" id="inputForm">
+                <div class="w">
+                    <label for="weight" style="font-weight: bold;">Weight:</label>
+                    <input type="number" id="weight" name="weight"></input>
+                    <select id="weightU" name="weightU">
+                        <option value="kg" selected>kg</option>
+                        <option value="g">g</option>
+                        <option value="oz">oz</option>
+                        <option value="lb">lb</option>
+                    </select>
+                </div>
+                <input type="range" min="0" max="200" id="weightS" name="weightS">
+                <div>
+                    <label for="height" style="font-weight: bold;">Height:</label>
+                    <input type="number" id="height" name="height"></input>
+                    <select id="heightU" name="heightU">
+                        <option value="cm" selected>cm</option>
+                        <option value="m">m</option>
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
+                <input type="range" min="0" max="250" id="heightS" name="heightS">
+            </form>
+
+            <div id="resultContainer">
+                <h3></h3>
+            </div>
+
+            <div id="charts">
+                <a><img src="bmi-chart.gif"></a>
+            </div>
+        </div>
+
+        <div class="bigContainer" id="reference">
+            <h1>BMI Reference Table</h1>
+            <table id="referenceTable">
+                <tr id="firstRow">
+                    <th>Classification</th>
+                    <th>BMI Range</th>
+                </tr>
+                <tr>
+                    <th>Severe Thinness</th>
+                    <th>&#60;16</th>
+                </tr>
+                <tr>
+                    <th>Moderate Thinness</th>
+                    <th>16 - 17</th>
+                </tr>
+                <tr>
+                    <th>Mild Thinness</th>
+                    <th>17 - 18.5</th>
+                </tr>
+                <tr>
+                    <th>Normal</th>
+                    <th>18.5 - 25</th>
+                </tr>
+                <tr>
+                    <th>Overweight</th>
+                    <th>25 - 30</th>
+                </tr>
+                <tr>
+                    <th>Obese Class I</th>
+                    <th>30 - 35</th>
+                </tr>
+                <tr>
+                    <th>Obese Class II</th>
+                    <th>35 - 40</th>
+                </tr>
+                <tr>
+                    <th>Obese Class III</th>
+                    <th>&#62; 40</th>
+                </tr>
+            </table>
         </div>
     </div>
+
+
+
 </body>
 
 </html>
