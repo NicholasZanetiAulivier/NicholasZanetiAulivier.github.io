@@ -98,6 +98,7 @@ input {
 
 select {
     font-size: 1vw;
+    background-color: #FFFFFF;
 }
 
 input[type="number"],
@@ -112,6 +113,12 @@ select {
 
 input[type="number"] {
     width: 5vw;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+input[type="number"]:focus {
+    background-color: #d3ffff;
 }
 
 #resultContainer {
@@ -167,11 +174,11 @@ th {
 
 @media only screen and (max-width: 600px) {
     #topnavbar h1 {
-        font-size: 32px;
+        font-size: 50px;
     }
 
     p {
-        font-size: 2.7vw;
+        font-size: 3.2vw;
         padding-left: 2vw;
         padding-right: 2vw;
     }
@@ -182,7 +189,7 @@ th {
         justify-content: center;
         width: fit-content;
         margin: auto;
-        margin-top: 6vw;
+        margin-top: 20vw;
     }
 
     #facts {
@@ -190,54 +197,63 @@ th {
     }
 
     .bigContainer {
-        width: 60vw;
+        width: 80vw;
         padding: 1vw;
         padding-bottom: 5vw;
         margin: 1vw;
     }
 
     #inputForm {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     h1 {
         text-align: center;
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     input {
-        font-size: 4vw;
+        font-size: 5vw;
         height: fit-content;
     }
 
     select {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     input[type="number"] {
-        width: 15vw;
+        width: 20vw;
+        padding-bottom: 1vw;
+        padding-top: 1vw;
         border-radius: 1vw;
     }
 
     #resultContainer {
-        font-size: 5vw;
+        font-size: 7vw;
     }
 
     #resultContainer h1 {
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
     img {
-        width: 50vw;
+        width: 70vw;
     }
 
     #formula {
-        width: 35vw;
+        width: 50vw;
     }
 
     tr,
     th,
     table {
-        font-size: 3vw;
+        font-size: 4vw;
+        padding: 2vw;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    #topnavbar h1 {
+        font-size: 40px;
     }
 }
