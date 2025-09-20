@@ -1,0 +1,616 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #235ef1;
+    --shade-color: #C9B8EB;
+    --grey-color: #b6b6b6;
+    --pro-color: #5dce00;
+    --cons-color: #ff0000;
+
+    --readable-text: "Cambria", Georgia, serif;
+}
+
+
+.topnavbar {
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(235, 235, 235, 0.7);
+    backdrop-filter: blur(10px);
+    color: var(--main-color);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+#navHide {
+    display: none;
+    position: absolute;
+}
+
+#navHide img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+#navHide input {
+    display: none;
+}
+
+#navTitle {
+    font-size: 2.4vw;
+    margin-left: 15%;
+    font-weight: bold;
+    font-family: 'Cooper';
+}
+
+#navTitle a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.navLinks {
+    position: relative;
+    display: flex;
+    float: right;
+    list-style-type: none;
+    align-items: center;
+}
+
+.navLinks li {
+    font-size: 1.3vw;
+    font-weight: bold;
+    font-family: "Times New Roman", "Verdana";
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.navLinks li a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.search {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: 9vw;
+}
+
+.search input {
+    height: 2.3vw;
+    border-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    background-color: transparent;
+    color: #000000;
+}
+
+.search button {
+    background: none;
+}
+
+.search img {
+    color: #EBEBEB;
+    background-color: transparent;
+    width: 2.5vw;
+    margin-left: 1vw;
+}
+
+.content {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20vw;
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+}
+
+.content #title {
+    font-family: var(--readable-text);
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.content img {
+    width: 90%;
+}
+
+.content #credits {
+    align-self: baseline;
+    font-size: 1.3vw;
+    font-family: var(--readable-text);
+    margin: 1vw;
+}
+
+.paragraphs p {
+    font-size: 1.3vw;
+    font-family: var(--readable-text);
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#comments {
+    width: 70%;
+    margin: auto;
+}
+
+#comments .bar {
+    background-color: var(--main-color);
+    height: fit-content;
+    margin: auto;
+    padding: 1vw;
+    font-size: 2vw;
+    font-family: 'Cooper';
+    color: #FFFFFF;
+}
+
+#comments .template,
+#comments .comment {
+    height: 10vw;
+    width: 80%;
+    margin: auto;
+    margin-top: 2vw;
+    padding-bottom: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #000000 1px dashed;
+}
+
+#comments .comment {
+    border-bottom-style: none;
+}
+
+#comments .template #commentContent {
+    position: relative;
+    display: flex;
+    border: #000000 1px solid;
+    height: 80%;
+    width: 70%;
+    margin-left: 2vw;
+    font-size: 1vw;
+    padding-left: 1vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#comments .comment p {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    font-size: 1vw;
+    padding-left: 1vw;
+}
+
+#comments .comment .commenter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 70%;
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    font-family: 'Times New Roman', Times, serif;
+    border-left: #000000 1px solid;
+}
+
+#comments .comment .commenter .commenterName {
+    align-self: baseline;
+    font-weight: bold;
+    margin-left: 2vw;
+}
+
+#comments .template img,
+#comments .comment img {
+    aspect-ratio: 1;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border: #000000 1px solid;
+}
+
+footer {
+    padding-bottom: 5vw;
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+footer h1 {
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Cooper';
+}
+
+footer #footerBigDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 1.3vw;
+    font-family: var(--readable-text);
+}
+
+#webStuff,
+#contentStuff,
+#contactStuff {
+    width: 20%;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-top: 1vw;
+    line-height: 1.5vw;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*Laptops and PCs*/
+@media only screen and (max-width: 1200px) {
+    .navLinks li {
+        font-size: 1.5vw;
+    }
+}
+
+/*Tablets and such*/
+@media only screen and (max-width: 992px) {
+
+    #navTitle {
+        font-size: 4vw;
+        margin-left: 5%;
+    }
+
+    .navLinks li {
+        font-size: 2vw;
+    }
+
+
+    .search {
+        margin-right: 1vw;
+    }
+
+    .search input {
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+
+    .search button {
+        background: none;
+    }
+
+    .search img {
+        width: 3vw;
+        margin-left: 1vw;
+    }
+
+    .content {
+        margin: auto;
+        margin-top: 8vw;
+        width: 80%;
+    }
+
+    .content #title {
+        font-size: 4vw;
+    }
+
+    .content #credits {
+        font-size: 1.3vw;
+    }
+
+    .paragraphs p {
+        font-size: 1.8vw;
+        margin-bottom: 4vw;
+    }
+
+    #comments {
+        width: 90%;
+    }
+
+    #comments .bar {
+        padding: 1vw;
+        padding-left: 3vw;
+        font-size: 3vw;
+    }
+
+    #comments .template,
+    #comments .comment {
+        height: 15vw;
+        width: 90%;
+    }
+
+    #comments .template #commentContent {
+        height: 80%;
+        width: 70%;
+        font-size: 1.3vw;
+    }
+
+    #comments .comment .commenter .commenterName {
+        font-size: 2vw;
+    }
+
+    #comments .comment p {
+        font-size: 1.3vw;
+    }
+
+    footer {
+        height: 40vw;
+    }
+
+    footer h1 {
+        font-size: 5vw;
+    }
+
+    footer #footerBigDiv {
+        font-size: 2.5vw;
+    }
+
+    #webStuff,
+    #contentStuff,
+    #contactStuff {
+        width: 30%;
+    }
+
+    footer ul {
+        list-style-type: none;
+        margin-top: 1vw;
+        line-height: 3vw;
+    }
+}
+
+/*NavBar breakpoint*/
+@media only screen and (max-width: 768px) {
+
+    .topnavbar {
+        background-color: var(--main-color);
+        backdrop-filter: none;
+        color: #FFFFFF;
+        overflow: visible;
+    }
+
+
+    #navTitle {
+        margin: auto;
+        font-size: 5vw;
+    }
+
+    #navHide img:nth-child(3) {
+        display: none;
+    }
+
+    #navHide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 7vw;
+        width: 7vw;
+        margin: 0;
+        right: 5vw;
+    }
+
+    .navLinks {
+        position: fixed;
+        background-color: var(--main-color);
+        padding: 2vw;
+        top: 13vw;
+        right: 0;
+        width: 40vw;
+    }
+
+    .search {
+        position: absolute;
+        background-color: var(--main-color);
+        height: fit-content;
+        right: 0;
+        top: 8vw;
+        z-index: 2001;
+        width: 40vw;
+        margin: 0;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+
+    #navSearchInput {
+        background-color: #FFFFFF;
+        border: #000000 1px solid;
+        border-radius: 10px;
+        margin-left: 4vw;
+        z-index: 2001;
+        font-size: 3vw;
+        padding: 2vw;
+        width: 70%;
+    }
+
+    #navSearchButton {
+        margin-right: 0;
+        padding-right: 0;
+        z-index: 2001;
+    }
+
+    .navLinks li a {
+        color: #FFFFFF;
+        font-size: 3vw;
+    }
+
+    #navHide:has(input[type="checkbox"]:checked)+ul {
+        display: block;
+    }
+
+    #navHide:has(input[type="checkbox"]:checked)~.search {
+        display: block;
+    }
+
+    #navHide input[type="checkbox"]:checked~img:nth-child(3) {
+        display: block;
+    }
+
+    #navHide input[type="checkbox"]:checked~img:nth-child(2) {
+        display: none;
+    }
+
+    .navLinks,
+    .search {
+        display: none;
+    }
+
+    #navTitle a {
+        color: #FFFFFF;
+    }
+
+
+}
+
+/*Phones*/
+@media only screen and (max-width: 600px) {
+
+    body {
+        padding-top: 15vw;
+    }
+
+    .topnavbar #navTitle {
+        font-size: 10vw;
+    }
+
+    .topnavbar {
+        top: 0;
+    }
+
+    #navHide {
+        height: 10vw;
+        width: 10vw;
+        margin: 0;
+        right: 5vw;
+    }
+
+    .navLinks {
+        top: 20vw;
+        width: 50vw;
+    }
+
+    .search {
+        top: 14vw;
+        width: 50vw;
+    }
+
+    #navSearchInput {
+        font-size: 4vw;
+        padding: 3vw;
+    }
+
+    #navSearchButton img {
+        width: 4vw;
+    }
+
+    .navLinks li a {
+        font-size: 5vw;
+    }
+
+    .content {
+        margin-top: 1vw;
+    }
+
+    .content #title {
+        font-size: 5.5vw;
+    }
+
+    .content #credits {
+        font-size: 2.5vw;
+    }
+
+    .paragraphs p {
+        font-size: 3vw;
+    }
+
+    #comments {
+        width: 100%;
+    }
+
+    #comments .bar {
+        font-size: 5vw;
+    }
+
+    #comments .template,
+    #comments .comment {
+        height: 30vw;
+        width: 90%;
+    }
+
+    #comments .template #commentContent {
+        font-size: 3vw;
+    }
+
+    #comments .comment .commenter .commenterName {
+        font-size: 4vw;
+    }
+
+    #comments .comment p {
+        font-size: 3vw;
+    }
+
+    footer {
+        height: fit-content;
+
+    }
+
+    footer h1 {
+        font-size: 10vw;
+    }
+
+    footer #footerBigDiv {
+        flex-direction: column;
+        align-items: center;
+        font-size: 4vw;
+    }
+
+    #webStuff,
+    #contentStuff,
+    #contactStuff {
+        height: fit-content;
+        align-items: center;
+        text-align: center;
+        padding-top: 5vw;
+    }
+
+    footer ul {
+        margin-top: 2vw;
+        line-height: 4.5vw;
+    }
+}

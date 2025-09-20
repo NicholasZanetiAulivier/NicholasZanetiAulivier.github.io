@@ -1,0 +1,881 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #235ef1;
+    --shade-color: #C9B8EB;
+    --grey-color: #b6b6b6;
+    --pro-color: #5dce00;
+    --cons-color: #ff0000;
+
+    --readable-text: "Cambria", Georgia, serif;
+}
+
+.topnavbar {
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(235, 235, 235, 0.7);
+    backdrop-filter: blur(10px);
+    color: var(--main-color);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+#navHide {
+    display: none;
+    position: absolute;
+}
+
+#navHide img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+#navHide input {
+    display: none;
+}
+
+#navTitle {
+    font-size: 2.4vw;
+    margin-left: 15%;
+    font-weight: bold;
+    font-family: 'Cooper';
+}
+
+.navLinks {
+    position: relative;
+    display: flex;
+    float: right;
+    list-style-type: none;
+    align-items: center;
+}
+
+.navLinks li {
+    font-size: 1.3vw;
+    font-weight: bold;
+    font-family: "Times New Roman", "Verdana";
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.navLinks li a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.search {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-right: 9vw;
+}
+
+.search input {
+    height: 2.3vw;
+    border-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    background-color: transparent;
+    color: #000000;
+}
+
+.search button {
+    background: none;
+}
+
+.search img {
+    color: #EBEBEB;
+    background-color: transparent;
+    width: 2.5vw;
+    margin-left: 1vw;
+}
+
+#banner {
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#banner span {
+    filter: brightness(100%);
+}
+
+#banner img {
+    position: absolute;
+    object-fit: cover;
+    filter: brightness(50%);
+    width: 100%;
+    height: 30vw;
+}
+
+#banner .title {
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: 'Cooper';
+    color: #FFFFFF;
+}
+
+#banner .subtitle {
+    font-size: 1.7vw;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', "Helvetica";
+    color: #FFFFFF;
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+}
+
+.container .title {
+    margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: fit-content;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Cooper';
+    color: var(--main-color);
+    border-bottom: #235ef1 2px solid;
+    border-top: #235ef1 2px solid;
+}
+
+#blogs #columns {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+}
+
+#blogs .row {
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    margin: auto;
+    width: 80%;
+}
+
+#blogs .rowItem {
+    width: 25vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#blogs .rowItem * {
+    font-family: var(--readable-text);
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    padding: 0;
+}
+
+#blogs .rowItem img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+#blogs .rowItem .title {
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.3vw;
+    color: #000000;
+    border: none;
+    overflow: hidden;
+}
+
+#blogs .rowItem .itemMeta {
+    color: var(--grey-color);
+    text-align: justify;
+    height: 1.5vw;
+    font-size: 0.9vw;
+    overflow: hidden;
+}
+
+#blogs .rowItem .itemDescription {
+    text-align: justify;
+    font-size: 1vw;
+    height: 5vw;
+    overflow: hidden;
+}
+
+#blogs .rowItem .readMore {
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.9vw;
+    cursor: pointer;
+    width: fit-content;
+    border-bottom: #000000 double 1px;
+    border-top: #000000 double 1px;
+    background-color: #FFFFFF;
+}
+
+#blogs #moreBlogs {
+    text-decoration: none;
+    font-family: var(--readable-text);
+    text-align: center;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.5vw;
+    width: fit-content;
+    margin: auto;
+    display: block;
+    padding: 0.5vw;
+    border: var(--main-color) 1px double;
+    box-shadow: 2px 2px;
+}
+
+#reviews {
+    margin-bottom: 4vw;
+}
+
+#reviews .title {
+    margin-bottom: 0;
+}
+
+.reviewColumn {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.review {
+    display: flex;
+    width: 100%;
+    height: 20vw;
+    text-decoration: none;
+    color: #000000;
+    margin-top: 1.5vw;
+}
+
+.preview {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 100%;
+}
+
+.preview .leftPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.preview .leftPart img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+    height: 80%;
+}
+
+.preview .rightPart {
+    padding-left: 2vw;
+    padding-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.preview .rightPart .title {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    font-family: var(--readable-text);
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: #000000 1px solid;
+    color: #000000;
+    overflow: hidden;
+}
+
+.preview .rightPart .description {
+    text-align: justify;
+    font-size: 1.2vw;
+    font-family: var(--readable-text);
+    overflow: hidden;
+}
+
+.aspects {
+    height: inherit;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aspect {
+    border-left: var(--grey-color) 1px solid;
+    border-right: var(--grey-color) 1px solid;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+    font-family: var(--readable-text);
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.aspect span {
+    text-align: center;
+}
+
+#pros {
+    border-color: var(--pro-color);
+}
+
+#cons {
+    border-color: var(--cons-color);
+}
+
+#summary {
+    border-color: var(--main-color);
+
+}
+
+#reviews #moreReviews {
+    text-decoration: none;
+    font-family: var(--readable-text);
+    text-align: center;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.5vw;
+    width: fit-content;
+    margin: auto;
+    display: block;
+    padding: 0.5vw;
+    border: var(--main-color) 1px double;
+    box-shadow: 2px 2px;
+}
+
+
+footer {
+    padding-bottom: 5vw;
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+footer h1 {
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Cooper';
+}
+
+footer #footerBigDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 1.3vw;
+    font-family: var(--readable-text);
+}
+
+#webStuff,
+#contentStuff,
+#contactStuff {
+    width: 20%;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-top: 1vw;
+    line-height: 1.5vw;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*Laptops and PCs*/
+@media only screen and (max-width: 1200px) {
+    .navLinks li {
+        font-size: 1.5vw;
+    }
+
+    #blogs .row:nth-child(3) {
+        display: none;
+    }
+
+    #blogs #columns {
+        flex-direction: row;
+        width: 70%;
+        margin: auto;
+    }
+
+    #blogs .row {
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #blogs .rowItem {
+        width: 30vw;
+        height: 36vw;
+    }
+
+    #blogs .rowItem .title {
+        height: 5vw;
+        font-size: 1.8vw;
+    }
+
+    #blogs .rowItem .itemMeta {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #blogs .rowItem .itemDescription {
+        font-size: 1.3vw;
+        height: 7vw;
+    }
+
+    .reviewColumn {
+        width: 70%;
+    }
+}
+
+/*Tablets and such*/
+@media only screen and (max-width: 992px) {
+    #blogs .row:nth-child(3) {
+        display: none;
+    }
+
+    #blogs #columns {
+        width: 100%;
+    }
+
+    #blogs .row {
+        width: 50%;
+    }
+
+    #blogs .rowItem {
+        width: 40vw;
+        height: 60vw;
+    }
+
+    #blogs .rowItem .title {
+        height: 10vw;
+        font-size: 3vw;
+    }
+
+    #blogs .rowItem .itemMeta {
+        font-size: 2vw;
+        height: 2.5vw;
+    }
+
+    #blogs .rowItem .itemDescription {
+        font-size: 2vw;
+        height: 15vw;
+    }
+
+    #blogs .rowItem .readMore {
+        font-size: 2vw;
+        font-weight: bold;
+    }
+
+    #blogs #moreBlogs {
+        font-size: 3vw;
+        margin-bottom: 5vw;
+    }
+
+    .container .title {
+        font-size: 4vw;
+    }
+
+
+    #navTitle {
+        font-size: 4vw;
+        margin-left: 5%;
+    }
+
+    .navLinks li {
+        font-size: 2vw;
+    }
+
+
+    .search {
+        margin-right: 1vw;
+    }
+
+    .search input {
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+
+    .search button {
+        background: none;
+    }
+
+    .search img {
+        width: 3vw;
+        margin-left: 1vw;
+    }
+
+    .reviewColumn {
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review {
+        height: 30vw;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+    .preview .rightPart .title {
+        font-size: 3vw;
+    }
+
+    .preview .rightPart .description {
+        font-size: 2vw;
+    }
+
+    .aspects {
+        display: none;
+    }
+
+    #reviews #moreReviews {
+        font-size: 3vw;
+        margin-bottom: 5vw;
+    }
+
+    footer {
+        height: 40vw;
+    }
+
+    footer h1 {
+        font-size: 5vw;
+    }
+
+    footer #footerBigDiv {
+        font-size: 2.5vw;
+    }
+
+    #webStuff,
+    #contentStuff,
+    #contactStuff {
+        width: 30%;
+    }
+
+    footer ul {
+        list-style-type: none;
+        margin-top: 1vw;
+        line-height: 3vw;
+    }
+}
+
+/*NavBar breakpoint*/
+@media only screen and (max-width: 768px) {
+
+    .topnavbar {
+        background-color: var(--main-color);
+        backdrop-filter: none;
+        color: #FFFFFF;
+        overflow: visible;
+    }
+
+
+    #navTitle {
+        margin: auto;
+        font-size: 5vw;
+    }
+
+    #navHide img:nth-child(3) {
+        display: none;
+    }
+
+    #navHide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 7vw;
+        width: 7vw;
+        margin: 0;
+        right: 5vw;
+    }
+
+    .navLinks {
+        position: fixed;
+        background-color: var(--main-color);
+        padding: 2vw;
+        top: 13vw;
+        right: 0;
+        width: 40vw;
+    }
+
+    .search {
+        position: absolute;
+        background-color: var(--main-color);
+        height: fit-content;
+        right: 0;
+        top: 8vw;
+        z-index: 2001;
+        width: 40vw;
+        margin: 0;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+
+    #navSearchInput {
+        background-color: #FFFFFF;
+        border: #000000 1px solid;
+        border-radius: 10px;
+        margin-left: 4vw;
+        z-index: 2001;
+        font-size: 3vw;
+        padding: 2vw;
+        width: 70%;
+    }
+
+    #navSearchButton {
+        margin-right: 0;
+        padding-right: 0;
+        z-index: 2001;
+    }
+
+    .navLinks li a {
+        color: #FFFFFF;
+        font-size: 3vw;
+    }
+
+    #navHide:has(input[type="checkbox"]:checked)+ul {
+        display: block;
+    }
+
+    #navHide:has(input[type="checkbox"]:checked)~.search {
+        display: block;
+    }
+
+    #navHide input[type="checkbox"]:checked~img:nth-child(3) {
+        display: block;
+    }
+
+    #navHide input[type="checkbox"]:checked~img:nth-child(2) {
+        display: none;
+    }
+
+    .navLinks,
+    .search {
+        display: none;
+    }
+
+
+}
+
+/*Phones*/
+@media only screen and (max-width: 600px) {
+
+    body {
+        padding-top: 15vw;
+    }
+
+    .topnavbar #navTitle {
+        font-size: 10vw;
+    }
+
+    .topnavbar {
+        top: 0;
+    }
+
+    #navHide {
+        height: 10vw;
+        width: 10vw;
+        margin: 0;
+        right: 5vw;
+    }
+
+    .navLinks {
+        top: 20vw;
+        width: 50vw;
+    }
+
+    .search {
+        top: 14vw;
+        width: 50vw;
+    }
+
+    #navSearchInput {
+        font-size: 4vw;
+        padding: 3vw;
+    }
+
+    #navSearchButton img {
+        width: 4vw;
+    }
+
+    .navLinks li a {
+        font-size: 5vw;
+    }
+
+    #banner {
+        display: none;
+    }
+
+    #blogs #columns {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #blogs .row {
+        width: 100%;
+    }
+
+    #blogs .rowItem {
+        width: 80vw;
+        height: 110vw;
+        padding-bottom: 5vw;
+    }
+
+    #blogs .rowItem .title {
+        height: 40vw;
+        font-size: 6vw;
+    }
+
+    #blogs .rowItem .itemMeta {
+        font-size: 3vw;
+        height: 5vw;
+    }
+
+    #blogs .rowItem .itemDescription {
+        font-size: 3.5vw;
+        height: 40vw;
+    }
+
+    #blogs .rowItem .readMore {
+        font-size: 5vw;
+    }
+
+    #blogs #moreBlogs {
+        font-size: 6vw;
+        margin-bottom: 6vw;
+        margin-top: 6vw;
+    }
+
+    .container .title {
+        font-size: 10vw;
+        margin-top: 3vw;
+        margin-bottom: 5vw;
+    }
+
+    .reviewColumn {
+        width: 90%;
+    }
+
+    .review {
+        height: 120vw;
+    }
+
+    .preview {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .preview .leftPart img {
+        width: 100%;
+        align-self: center;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .preview .rightPart .title {
+        font-size: 6vw;
+    }
+
+    .preview .rightPart .description {
+        font-size: 4vw;
+    }
+
+    #reviews #moreReviews {
+        font-size: 6vw;
+        margin-bottom: 6vw;
+    }
+
+    footer {
+        height: fit-content;
+
+    }
+
+    footer h1 {
+        font-size: 10vw;
+    }
+
+    footer #footerBigDiv {
+        flex-direction: column;
+        align-items: center;
+        font-size: 4vw;
+    }
+
+    #webStuff,
+    #contentStuff,
+    #contactStuff {
+        height: fit-content;
+        align-items: center;
+        text-align: center;
+        padding-top: 5vw;
+    }
+
+    footer ul {
+        margin-top: 2vw;
+        line-height: 4.5vw;
+    }
+}
